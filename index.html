@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#5a6048">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="lock">
@@ -48,8 +48,18 @@
 
 <div class="env" id="env" role="button" tabindex="0" aria-label="Abrir invitación">
   <div class="letter"><small>Estás invitado</small><span class="script">Karen & Omar</span></div>
-  <svg class="pocket" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0L150 140L300 0V200H0Z" fill="#a5ad98"/></svg>
-  <svg class="flap" viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H300L150 140Z" fill="#5a6048"/></svg>
+  <!-- <svg class="pocket" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0L150 140L300 0V200H0Z" fill="#a5ad98"/></svg> -->
+  <!-- <svg class="flap" viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H300L150 140Z" fill="#5a6048"/></svg> -->
+   <svg class="pocket" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true">
+      <defs><pattern id="patA" width="60" height="60" patternUnits="userSpaceOnUse"><image href="img/patron.svg" width="60" height="60"/></pattern></defs>
+      <path d="M0 0L150 140L300 0V200H0Z" fill="#a5ad98"/>
+      <path d="M0 0L150 140L300 0V200H0Z" fill="url(#patA)" opacity=".25"/>
+    </svg>
+    <svg class="flap" viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true">
+      <defs><pattern id="patB" width="60" height="60" patternUnits="userSpaceOnUse"><image href="img/patron.svg" width="60" height="60"/></pattern></defs>
+      <path d="M0 0H300L150 140Z" fill="#5a6048"/>
+      <path d="M0 0H300L150 140Z" fill="url(#patB)" opacity=".15"/>
+    </svg>
   <div class="seal">K&amp;O</div>
 </div>
   <p class="tap">Toca el sobre para abrirlo</p>
@@ -84,8 +94,12 @@
   <div class="wrap center">
     <h2>Con la bendición de nuestros padres</h2>
     <div class="grid2">
-      <div class="glass card"><h3>Padres de la novia</h3><p>Emma Janneth López Irigoyen</p></div>
-      <div class="glass card"><h3>Padres del novio</h3><p>René Joaquín Vargas Torrico</p><p><span class="cruz" title="En memoria">†</span> Delia Mercedes Antezana Vargas</p></div>
+      <div class="glass card"><h3>Padres de la novia</h3>
+        <p>Emma Janneth López Irigoyen</p></div>
+        <p>René Joaquín Vargas Torrico</p>
+      <div class="glass card">
+        <h3>Madre del novio</h3>
+        <p class="names"><span class="cruz" title="En memoria">†</span> Delia Mercedes Antezana Vargas</p></div>
     </div>
     <h2 class="sub">Nuestros padrinos</h2>
     <div class="grid2">

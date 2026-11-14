@@ -4,7 +4,7 @@ html{scroll-behavior:smooth}
 body{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.2rem;line-height:1.55;color:var(--ink);background:var(--cream);overflow-x:hidden}
 body.lock{overflow:hidden;height:100vh}
 .wrap{width:min(1100px,100%);margin:0 auto}.narrow{width:min(720px,100%)}.center{text-align:center}
-h1,h2,.script{font-family:"Pinyon Script","Brush Script MT",cursive;font-weight:400}
+h1,h2,.script{font-family:"Great Vibes","Brush Script MT",cursive;font-weight:400}
 h2{font-size:clamp(2.2rem,8vw,3.4rem);line-height:1.2;margin-bottom:1.2rem}
 h2.sub{margin-top:2.5rem}
 h3{font-size:1.4rem;font-weight:600;margin-bottom:.4rem}
@@ -22,7 +22,8 @@ h3{font-size:1.4rem;font-weight:600;margin-bottom:.4rem}
 .big{font-size:1.3rem;font-weight:600}
 .time{font-size:2.8rem;line-height:1.2;margin:.2rem 0 .5rem;color:var(--olive)}
 .fill{opacity:.6;font-style:italic}
-.cruz{font-size:1.2em;margin-right:.2rem}
+.names{display:flex; justify-content:center;align-items:center;}
+.cruz{font-size:1.5em;margin-right:.2rem;}
 :focus-visible{outline:3px solid var(--clay);outline-offset:3px}
 
 /* Portada */
@@ -117,3 +118,14 @@ img.deco{object-fit:contain}
  .tl-list li{grid-template-columns:1fr 22px 1fr}
 }
 @media(prefers-reduced-motion:reduce){*{transition-duration:.01s!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* Animaciones al hacer scroll */
+main>section{overflow-x:clip}
+.rv{opacity:0;transition:opacity .9s ease var(--d,0s),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.rv.up{transform:translateY(34px)}
+.rv.zoom{transform:scale(.9)}
+.rv.left{transform:translateX(-26px)}
+.rv.in{opacity:1;transform:none}
+
+/* Textos cortos en cursiva con Great Vibes */
+.tap,.tap2{font-family:"Great Vibes","Brush Script MT",cursive;font-style:normal;font-size:1.5rem}

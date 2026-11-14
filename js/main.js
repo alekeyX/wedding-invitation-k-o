@@ -64,3 +64,34 @@ function cerrar(){ modal.classList.remove("show"); modal.setAttribute("aria-hidd
 $("closeModal").addEventListener("click", cerrar);
 modal.addEventListener("click", e => { if (e.target === modal) cerrar(); });
 addEventListener("keydown", e => { if (e.key === "Escape") cerrar(); });
+
+// ====== Animaciones al hacer scroll ======
+(function(){
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+  const grupos = [
+    ["section h2","up"], ["section .lead","up"], [".grid2 > .card","up"],
+    [".count div","zoom"], [".gallery","zoom"], [".map","up"],
+    [".tl-list li","left"], [".gift","zoom"], [".tap2","up"],
+    ["section .btn","up"], [".foot","up"]
+  ];
+  const io = new IntersectionObserver(entradas => {
+    entradas.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target;
+      io.unobserve(el);
+      el.classList.add("in");
+      // al terminar, se quita la clase para devolver el hover/animaciones originales
+      el.addEventListener("transitionend", e => {
+        if (e.target === el && e.propertyName === "opacity") el.classList.remove("rv","in","up","zoom","left");
+      });
+    });
+  }, {threshold: .15, rootMargin: "0px 0px -6% 0px"});
+  grupos.forEach(([sel, tipo]) => {
+    document.querySelectorAll(sel).forEach(el => {
+      const hermanos = [...el.parentElement.children].filter(c => c.matches(sel));
+      el.style.setProperty("--d", Math.min(hermanos.indexOf(el) * .12, .5) + "s");
+      el.classList.add("rv", tipo);
+      io.observe(el);
+    });
+  });
+})();
