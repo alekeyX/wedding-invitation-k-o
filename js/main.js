@@ -35,24 +35,27 @@ function tick(){
 }
 tick(); setInterval(tick, 1000);
 
-// ====== Galería automática (cambia cada 1 s, loop infinito) ======
-const gt = $("gtrack"), GAP = 16, CLONES = 3;
-const mk = f => `<div class="slide"><img src="${f}" alt="Karen y Omar" loading="lazy" draggable="false"></div>`;
-gt.innerHTML = FOTOS.concat(FOTOS.slice(0, CLONES)).map(mk).join("");
+// ====== Galería tipo carrusel 3D (cambia cada 2 s) ======
+const gt = $("gtrack");
+gt.innerHTML = FOTOS.map(f => `<div class="slide"><img src="${f}" alt="Karen y Omar" loading="lazy" draggable="false"></div>`).join("");
+const slides = [...gt.children], N = slides.length;
 let idx = 0;
-const stepPx = () => gt.querySelector(".slide").offsetWidth + GAP;
-function go(){
-  idx++;
-  gt.style.transition = "transform .8s ease-in-out";
-  gt.style.transform = `translateX(${-idx * stepPx()}px)`;
+function layout(){
+  const paso = slides[0].offsetWidth * .62;           // separación entre fotos
+  slides.forEach((el, i) => {
+    let d = (i - idx) % N;
+    if (d > N / 2) d -= N;
+    if (d < -N / 2) d += N;
+    const a = Math.abs(d), lado = Math.sign(d);
+    const escala = a === 0 ? 1 : a === 1 ? .8 : .62;   // la central es la más grande
+    el.style.transform = `translate(-50%,-50%) translateX(${d * paso}px) rotateY(${-lado * (a ? 24 : 0)}deg) scale(${escala})`;
+    el.style.opacity = a === 0 ? 1 : a === 1 ? .9 : a === 2 ? .5 : 0;
+    el.style.zIndex = 10 - a;
+  });
 }
-gt.addEventListener("transitionend", () => {
-  if (idx >= FOTOS.length){
-    gt.style.transition = "none"; idx = 0; gt.style.transform = "translateX(0)";
-  }
-});
-setInterval(go, 1500);
-addEventListener("resize", () => { gt.style.transition = "none"; gt.style.transform = `translateX(${-idx * stepPx()}px)`; });
+layout();
+setInterval(() => { idx = (idx + 1) % N; layout(); }, 2000);
+addEventListener("resize", layout);
 
 // ====== Regalo y modal QR ======
 const modal = $("modal"), gift = $("gift");
