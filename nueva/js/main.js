@@ -34,15 +34,15 @@ function tick(){
 tick(); setInterval(tick, 1000);
 
 // ====== Regalo y modal QR ======
-const modal = $("modal"), gift = $("gift");
-gift.addEventListener("click", () => {
-  gift.classList.add("open");
-  setTimeout(() => { modal.classList.add("show"); modal.setAttribute("aria-hidden", "false"); }, 550);
-});
-function cerrar(){ modal.classList.remove("show"); modal.setAttribute("aria-hidden", "true"); gift.classList.remove("open"); }
-$("closeModal").addEventListener("click", cerrar);
-modal.addEventListener("click", e => { if (e.target === modal) cerrar(); });
-addEventListener("keydown", e => { if (e.key === "Escape") cerrar(); });
+// const modal = $("modal"), gift = $("gift");
+// gift.addEventListener("click", () => {
+//   gift.classList.add("open");
+//   setTimeout(() => { modal.classList.add("show"); modal.setAttribute("aria-hidden", "false"); }, 550);
+// });
+// function cerrar(){ modal.classList.remove("show"); modal.setAttribute("aria-hidden", "true"); gift.classList.remove("open"); }
+// $("closeModal").addEventListener("click", cerrar);
+// modal.addEventListener("click", e => { if (e.target === modal) cerrar(); });
+// addEventListener("keydown", e => { if (e.key === "Escape") cerrar(); });
 
 // ====== Animaciones al hacer scroll ======
 (function(){
