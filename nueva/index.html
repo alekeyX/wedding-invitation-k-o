@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karen & Omar · Nuestra boda</title>
+<meta name="theme-color" content="#5a6048">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main>
+
+<!-- Portada -->
+<header class="hero" id="inicio">
+  <div class="titulo">
+    <div class="nums" aria-hidden="true"><span>26</span><span>12</span><span>26</span></div>
+    <h1 class="names"><span>Karen</span><span class="amp">&</span><span>Omar</span></h1>
+  </div>
+  <p class="quote">"La felicidad solo es real cuando es compartida"</p>
+  <p class="fecha">26.12.26</p>
+  <div class="player">
+    <p>Dale play a la música</p>
+    <div class="bar" id="bar"><i id="prog"></i></div>
+    <div class="ctrl">
+      <button id="loop" class="on" aria-label="Repetir"><svg viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2z"/></svg></button>
+      <button id="rew" aria-label="Reiniciar"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zM20 6v12L9.5 12z"/></svg></button>
+      <button id="play" class="pp" aria-label="Reproducir o pausar"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      <button id="fwd" aria-label="Adelantar"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM4 6l10.5 6L4 18z"/></svg></button>
+    </div>
+    <audio id="music" loop preload="none" src="audio/music.mp3"></audio>
+  </div>
+</header>
+
+<!-- Foto 1 + cuenta regresiva -->
+<section class="foto center" id="cuenta" style="background-image:url(fotos/photo1.jpg)">
+  <div>
+    <h2>Faltan...</h2>
+    <div class="count">
+      <div><b id="d">0</b><span>días</span></div><em>:</em>
+      <div><b id="h">0</b><span>horas</span></div><em>:</em>
+      <div><b id="m">0</b><span>minutos</span></div><em>:</em>
+      <div><b id="s">0</b><span>segundos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Padres y padrinos -->
+<section class="band center" id="padres">
+  <h2>Con la bendición de nuestros padres</h2>
+  <div class="cards c2">
+    <div class="card"><h3>Padres de la novia</h3><p>Emma Janneth López Irigoyen</p><p>René Joaquín Vargas Torrico</p><img class="rose" src="img/flower.png" alt=""></div>
+    <div class="card"><h3>Madre del novio</h3><p><span class="cruz" title="En memoria">†</span> Delia Mercedes Antezana Vargas</p></div>
+    <div class="card"><h3>Padrinos de religión</h3><p>Oscar Ramiro Veizaga Rojas</p><p>María Luisa Quiroz Agreda</p></div>
+    <div class="card"><h3>Padrinos de civil</h3><p>Marco Antonio Quiroz Agreda</p><p>Jhilda Mariscal Flores</p><img class="rose" src="img/flower.png" alt=""></div>
+  </div>
+</section>
+
+<!-- Ceremonias y recepción -->
+<section class="band center" id="fechas">
+  <div class="cards c3">
+    <article class="card">
+      <svg class="ico" viewBox="0 0 64 64"><path d="M32 6v10M27 11h10M32 16L18 28v26h28V28zM26 54V40a6 6 0 0112 0v14M8 54h48M18 28L8 36v18M46 28l10 8v18"/></svg>
+      <h2>Boda religiosa</h2>
+      <p class="big">Sábado 26 de diciembre de 2026</p>
+      <p class="time">14:00 hrs</p>
+      <p>Iglesia Santísima Trinidad<br>Villa Moderna, Quillacollo</p>
+      <a class="ubi" target="_blank" rel="noopener" href="https://maps.app.goo.gl/JVR7bDMpeMP4P95ZA">Ubicación</a>
+    </article>
+    <article class="card">
+      <svg class="ico" viewBox="0 0 64 64"><path d="M18 10h14l-2 20a5 5 0 01-10 0zM25 35v18M19 53h12M38 14h14l-2 20a5 5 0 01-10 0zM45 39v14M39 53h12"/></svg>
+      <h2>Recepción</h2>
+      <p class="big">Sábado 26 de diciembre de 2026</p>
+      <p class="time">17:00 hrs</p>
+      <p>Salón de Eventos Golden</p>
+      <a class="ubi" target="_blank" rel="noopener" href="https://maps.app.goo.gl/ucgMxcj3ktAdBB1fA">Ubicación</a>
+      <img class="rose" src="img/flower.png" alt="">
+    </article>
+    <article class="card">
+      <svg class="ico" viewBox="0 0 64 64"><circle cx="24" cy="38" r="13"/><circle cx="40" cy="38" r="13"/><path d="M26 8l-4 7 10 5 10-5-4-7z"/></svg>
+      <h2>Boda civil</h2>
+      <p class="big">Domingo 27 de diciembre de 2026</p>
+      <p class="time">16:00 hrs</p>
+      <p>Salón de Eventos Golden</p>
+      <a class="ubi" target="_blank" rel="noopener" href="https://maps.app.goo.gl/ucgMxcj3ktAdBB1fA">Ubicación</a>
+    </article>
+  </div>
+</section>
+
+<!-- Foto 2 + confirmar -->
+<section class="foto center" id="confirmar" style="background-image:url(fotos/photo2.jpg)">
+  <div>
+    <h2>Confirmar asistencia</h2>
+    <div class="glassbox">
+      <p style="font-weight:bold;">Tu presencia es el mejor regalo. Por favor, ayúdanos a organizar este día confirmando tu asistencia en el formulario antes de la fecha de la boda.</p>
+      <a class="ubi" target="_blank" rel="noopener" href="https://forms.gle/R388WSq6wuyytgeh7">Confirmar</a>
+    </div>
+  </div>
+</section>
+
+<!-- Itinerario -->
+<section class="band center" id="cronograma">
+  <div class="narrow">
+    <h2>Itinerario</h2>
+    <ol class="tl-list">
+      <li><time>14:00</time><i></i><span>Ceremonia religiosa</span></li>
+      <li><time>17:00</time><i></i><span>Recepción de invitados</span></li>
+      <li><time>18:00</time><i></i><span>Ingreso de los novios</span></li>
+      <li><time>19:00</time><i></i><span>Cena</span></li>
+      <li><time>20:00</time><i></i><span>Palabras de las familias</span></li>
+      <li><time>21:00</time><i></i><span>Baile</span></li>
+      <li><time>23:00</time><i></i><span>Torta y fiesta</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- Mensaje de puntualidad -->
+<section class="band center" id="mensaje">
+  <div class="narrow">
+    <h2>Un momento para compartir</h2>
+    <p class="lead">Queremos recordarles que la ceremonia será puntual (¡no hay hora boliviana!) y es muy importante para nosotros que estén presentes desde el inicio, para compartir juntos este momento ☺️</p>
+  </div>
+</section>
+
+<!-- Mesa de regalos -->
+<!-- <section class="band center" id="regalos">
+  <div class="cards c1">
+    <div class="card">
+      <h2>Mesa de regalos</h2>
+      <p>Tu compañía es nuestro mayor regalo. Si deseas tener un detalle con nosotros, con mucho cariño lo recibiremos.</p>
+      <button class="gift" id="gift" aria-label="Abrir regalo"><span class="lid"><b class="bow"></b></span><span class="box"><b class="rib"></b></span></button>
+      <p class="tap2">Toca el regalo para abrirlo</p>
+      <img class="rose" src="img/flower.png" alt="">
+    </div>
+  </div>
+</section> -->
+
+<!-- Foto 3 + cierre -->
+<section class="foto center" id="cierre" style="background-image:url(fotos/photo3.jpg)">
+  <div>
+    <div class="glassbox"><p style="font-weight:bold;">Esperamos con el corazón que nos acompañes en este día tan especial. Tu presencia hará nuestra celebración aún más significativa.</p></div>
+    <p class="firma">Karen & Omar</p>
+  </div>
+</section>
+</main>
+
+<!-- Modal QR -->
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="dialog" role="dialog" aria-modal="true" aria-label="QR para regalos">
+    <button class="x" id="closeModal" aria-label="Cerrar">×</button>
+    <h3>¡Gracias por tu cariño!</h3>
+    <p>Escanea el código QR para realizar tu aporte.</p>
+    <img src="qr/qr.png" alt="Código QR para pagos" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'qr-ph',textContent:'Código QR próximamente'}))">
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

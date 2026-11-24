@@ -1,13 +1,14 @@
-# Invitación de boda · Karen & Omar
+# Invitaciones · Karen & Omar
 
-Abre `index.html` (o `npx serve` en esta carpeta). Los navegadores solo reproducen música tras un toque, por eso hay un sobre de bienvenida.
+Abre `index.html`: según `config.js` muestra una u otra.
 
-## Archivos que debes agregar
-- `audio/musica.mp3` → la música de fondo.
-- `qr/qr.png` → la imagen del QR de pagos (se muestra al abrir el regalo).
-- Fotos: están en `fotos/`. Si cambias nombres o cantidad, edita la lista `FOTOS` en `js/main.js`.
+- `config.js` → `const MOSTRAR_NUEVA = true;` (nueva) o `false;` (antigua).
+- `antigua/` → invitación anterior, sin modificar.
+- `nueva/` → invitación con el diseño del video.
 
-## Pendientes
-- Horarios del cronograma: son de ejemplo, edítalos en la sección `#cronograma` de `index.html`.
-- Confirmaciones: botón enlazado a https://forms.gle/R388WSq6wuyytgeh7 (las respuestas llegan a tu Google Form/Sheet).
-# wedding-invitation-k-o
+Directo: `antigua/index.html` y `nueva/index.html` también se pueden abrir por separado.
+
+## Archivos por agregar en nueva/
+- `audio/music.mp3` → música del reproductor.
+- `qr/qr.png` → QR de pagos (se ve al abrir el regalo).
+- Fotos: `nueva/fotos/photo1.jpg`, `photo2.jpg`, `photo3.jpg` (cuenta regresiva, confirmación y cierre).
